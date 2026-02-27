@@ -306,7 +306,7 @@ public class Telinha extends javax.swing.JFrame {
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void JBFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBFecharActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_JBFecharActionPerformed
 
     /**
