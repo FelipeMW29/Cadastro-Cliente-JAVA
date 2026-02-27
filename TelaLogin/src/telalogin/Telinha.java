@@ -2,6 +2,7 @@ package telalogin;
 
 
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -39,7 +40,7 @@ public class Telinha extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        JTFNome = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -65,8 +66,8 @@ public class Telinha extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setBorder(null);
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("NOME:");
+        JTFNome.setForeground(new java.awt.Color(0, 0, 0));
+        JTFNome.setText("NOME:");
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("CPF:");
@@ -149,7 +150,7 @@ public class Telinha extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel1))
+                            .addComponent(JTFNome))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -226,7 +227,7 @@ public class Telinha extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(JTFIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1))
+                                    .addComponent(JTFNome))
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -274,7 +275,29 @@ public class Telinha extends javax.swing.JFrame {
     }//GEN-LAST:event_JRBOutroActionPerformed
 
     private void JBSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBSalvarActionPerformed
-        // TODO add your handling code here:
+        String NOME = JTFNome.getText();
+        String IDADE = JTFIdade.getText();
+        String CPF = JTFCpf.getText();
+        String CIDADE = JTFCidade.getText();
+        String BAIRRO = JTFBairro.getText();
+        String ESTADO = JTFEstado.getText();
+        String GÊNERO = null;
+        
+        if (JRBMasculino.isSelected()) {
+            GÊNERO = "Masculino";
+    } 
+        else if (JRBFeminino.isSelected()) {
+            GÊNERO = "Feminino";
+        }else if (JRBOutro.isSelected()) {
+            GÊNERO = "Outro";
+        }
+        JOptionPane.showMessageDialog(null, "NOME: " + NOME
+        +"\nIDADE " + IDADE
+        +"\nCPF " + CPF
+        +"\nCIDADE " + CIDADE
+        +"\nBAIRRO " + BAIRRO
+        +"\nESTADO " + ESTADO
+        +"\nGÊNERO " + GÊNERO);
     }//GEN-LAST:event_JBSalvarActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
@@ -333,7 +356,7 @@ public class Telinha extends javax.swing.JFrame {
     private javax.swing.JTextField JTFCpf;
     private javax.swing.JTextField JTFEstado;
     private javax.swing.JTextField JTFIdade;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel JTFNome;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
